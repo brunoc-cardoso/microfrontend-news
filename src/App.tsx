@@ -1,12 +1,11 @@
 import React from 'react'
 import './styles/global.css'
-// import { News } from './pages/News'
-import { NewsDetails } from './pages/NewsDetails'
+import { AppRoutes } from './routes'
 
 function App() {
   return (
     <div className="flex justify-center">
-      <NewsDetails />
+      <AppRoutes />
     </div>
   )
 }

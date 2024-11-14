@@ -43,6 +43,11 @@ module.exports = {
       exposes: {
         './News': './src/App'
       },
+      remotes: {
+        sponsors: 'sponsors@http://localhost:3002/remoteEntry.js',
+        ads: 'ads@http://localhost:3003/remoteEntry.js',
+        weather: 'weather@http://localhost:3004/remoteEntry.js'
+      },
       shared: {
         react: {
           singleton: true,
