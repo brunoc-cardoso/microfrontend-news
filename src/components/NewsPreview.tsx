@@ -2,7 +2,7 @@ import React from 'react'
 
 export function NewsPreview() {
   return (
-    <div className="flex items-center gap-6">
+    <div className="flex items-center gap-6 max-w-7xl">
       <div className="rounded-3xl bg-slate-600 min-w-96 w-1/2 h-64">
         <img src="" alt="" />
       </div>
