@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { Suspense } from 'react'
+const Ads = React.lazy(() => import('ads/Ads'))
 
 export function NewsDetails() {
   return (
-    <div className="gap-10 flex flex-col max-w-6xl justify-center items-center">
+    <div className="gap-10 flex flex-col max-w-7xl justify-center items-center">
       <h1 className="flex justify-center font-bold text-primary-color text-4xl max-w-4xl">
         Chamados a contribuir com o pacote fiscal, militares aceitam mudanças
         pontuais no sistema de previdência da corporação
@@ -14,7 +15,6 @@ export function NewsDetails() {
           alt=""
         />
       </div>
-      <div className="bg-lime-600 w-full h-28"></div>
       <span className="max-w-4xl h-max text-xl flex">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus
         dignissim enim sed maximus. Donec mauris augue, volutpat quis nunc in,
@@ -57,7 +57,9 @@ export function NewsDetails() {
         dolor. Phasellus nisl augue, imperdiet vel lacus ut, finibus ultricies
         diam.
       </span>
-      <div className="bg-lime-600 w-full h-28"></div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Ads />
+      </Suspense>
     </div>
   )
 }
