@@ -1,12 +1,12 @@
 import React from 'react'
-import { Title } from './components/title'
 import './styles/global.css'
+// import { News } from './pages/News'
+import { NewsDetails } from './pages/NewsDetails'
 
 function App() {
   return (
-    <div className="App">
-      <div className="container">This is my news!</div>
-      <Title size="large" variant="primary" />
+    <div className="flex justify-center">
+      <NewsDetails />
     </div>
   )
 }
