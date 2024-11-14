@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  // prefix: 'news-',
   content: [
     './src/**/*.{js,jsx,ts,tsx}',
     './public/index.html',
@@ -7,8 +8,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'primary-color': '#5429CC'
+      },
       fontFamily: {
-        sans: 'Poppins'
+        poppins: 'Poppins'
       }
     }
   },
