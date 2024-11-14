@@ -1,33 +1,40 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 type NewsPreviewProps = {
-  id: number;
-  title: string;
-  shortContent: string;
-  imageUrl: string;
-};
+  id: number
+  title: string
+  shortContent: string
+  imageUrl: string
+}
 
 export function NewsPreview({
   id,
   title,
   shortContent,
-  imageUrl,
+  imageUrl
 }: NewsPreviewProps) {
   return (
-    <div className="flex items-center gap-6 max-w-7xl flex-row">
-      <Link to={`/news/${id}`}>
-        <div className="rounded-3xl bg-slate-600 min-w-96 w-1/2 h-64">
-          <img src={imageUrl} alt="" />
+    <div className="max-w-7xl">
+      <Link
+        className="flex items-center gap-6 max-lg:flex-col max-lg:items-center max-lg:w-full"
+        to={`/news/${id}`}
+      >
+        <div className="min-w-96 w-2/5 h-64">
+          <img
+            className="w-full h-full object-cover rounded-3xl"
+            src={imageUrl}
+            alt=""
+          />
         </div>
-        <div className="gap-6 items-center">
-          <h1 className="font-bold text-primary-color text-2xl py-4">
+        <div className="w-3/5">
+          <h1 className="font-bold text-primary-color text-2xl py-4 max-lg:text-justify">
             {title}
           </h1>
 
-          <span className="w-1/2 h-64 text-xl">{shortContent}</span>
+          <span className="text-xl max-lg:text-justify">{shortContent}</span>
         </div>
       </Link>
     </div>
-  );
+  )
 }

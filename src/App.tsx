@@ -4,7 +4,7 @@ import { AppRoutes } from './routes'
 
 function App() {
   return (
-    <div className="flex justify-center">
+    <div className="w-full flex flex-col justify-center items-center">
       <AppRoutes />
     </div>
   )
